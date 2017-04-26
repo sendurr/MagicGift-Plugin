@@ -1,0 +1,123 @@
+{
+  "name": "GiftAid Product Importer",
+  "version": "1.0",
+//  "minimum_chrome_version": "9",
+  "manifest_version": 2,
+  "description": "Imports product detials into GiftAid database",
+  "icons": {
+    "16": "image_gift.png"
+  },
+  "browser_action": {
+    "default_title":"GiftAid",
+    "default_icon":"image_gift.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+"content_scripts": [
+  {
+  "matches": ["https://www.etsy.com/listing/*"],
+  "js": ["giftaid_esty.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.newegg.com/Product/*"],
+  "js": ["giftaid_newegg.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.overstock.com/*"],
+  "js": ["giftaid_overstock.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.zales.com/*"],
+  "js": ["giftaid_zales.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.sephora.com/*"],
+  "js": ["giftaid_sephora.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["https://www.tripadvisor.com/*"],
+  "js": ["giftaid_tripadvisor.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.costco.com/*"],
+  "js": ["giftaid_costco.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.footlocker.com/*"],
+  "js": ["giftaid_footlocker.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.cloud9living.com/*"],
+  "js": ["giftaid_cloud9living.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://oldnavy.gap.com/*"],
+  "js": ["giftaid_gap.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.wayfair.com/*"],
+  "js": ["giftaid_wayfair.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://shop.nordstrom.com/*"],
+  "js": ["giftaid_nordstorm.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.homedepot.com/*"],
+  "js": ["giftaid_homedepot.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  }, 
+  {
+  "matches": ["http://www.bestbuy.com/*"],
+  "js": ["giftaid_bestbuy.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.bhphotovideo.com/*"],
+  "js": ["giftaid_bhphotovideo.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.macmall.com/*"],
+  "js": ["giftaid_macmall.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.zappos.com/*"],
+  "js": ["giftaid_zappos.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.kohls.com/*"],
+  "js": ["giftaid_kohls.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.target.com/*"],
+  "js": ["giftaid_target.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.walmart.com/*"],
+  "js": ["giftaid_walmart.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.bluenile.com/*"],
+  "js": ["giftaid_bluenile.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.ebay.com/*"],
+  "js": ["giftaid_ebay.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.amazon.com/*"],
+  "js": ["giftaid_amazon.js","parse-1.4.0.min.js"]
+  },
+  {
+  "matches": ["http://www.flipkart.com/*"],
+  "js": ["giftaid_flipkart.js","jquery.qtip.min.js","parse-1.4.0.min.js"]
+  }
+],
+//  "option_page":"options.html",
+  "permissions":[
+    "background",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
